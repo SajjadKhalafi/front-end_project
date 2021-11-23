@@ -1,0 +1,452 @@
+<html>
+<head>
+    <title>پروژه پایانی</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="assets/css/persian-datepicker.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+          integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script type="text/javascript" src="assets/js/persian-datepicker.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50" class="text-right text-white bg-secondary">
+<header class="jumbotron bgimg-1 col-12" id="top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="row">
+            <ul class="navbar-nav">
+                <li class="nav-item flex-row">
+                    <a id="sabt" class="nav-link">
+                        <button class="btn btn-info btn-sm"
+                                type="button" data-toggle="modal" data-target="#modal-sabt" data-backdrop="static">ثبت
+                            نام
+                        </button>
+
+                    </a>
+                </li>
+                <li class="nav-item flex-row">
+                    <a id="enter" class="nav-link">
+                        <button class="btn btn-info btn-sm"
+                                type="button" data-toggle="modal" data-target="#modal-enter" data-backdrop="static">ورود
+                        </button>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" style="direction: ltr;" id="collapsibleNavbar">
+            <ul class="navbar-nav navbar-right" style="direction: rtl;">
+                <li class="nav-item">
+                    <a class="nav-link" href="#Services">خدمات</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Gallery">گالری</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Comments">نویسندگان</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#cal-ta">تاریخ و ماشین حساب</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#video">ویدیو</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Contact" id="asd">تماس با ما</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<div class="modal fade text-dark" id="modal-sabt" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><i class="fas fa-times"></i></button>
+                <br>
+                <h4 class="modal-title col-6">ثبت نام</h4>
+            </div>
+            <div class="modal-body">
+                <p>نام کاربری:</p>
+                <input type="text" class="form-control" placeholder="نام کاربری مورد نظر را وارد کنید" required>
+                <p>رمز عبور:</p>
+                <input type="password" class="form-control" placeholder="رمز عبور مورد نظر را وارد کنید" required>
+                <p>ایمیل:</p>
+                <input type="email" class="form-control" placeholder="ایمیل خود را وارد کنید" required>
+                <br>
+                <a href="#" id="sabt-btn">
+                    <button type="submit" class="btn btn-info" style="width: 100%;">ثبت نام</button>
+                </a>
+            </div>
+            <div class="modal-footer">
+                <span class="text-right">
+                    آیا قبلا <a href="#">ثبت نام </a>کرده اید!
+                </span>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">خروج <i
+                        class="fas fa-times"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal text-dark flex-row-reverse fade" id="modal-enter" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header col-12">
+                <button type="button" class="close" data-dismiss="modal"><i class="fas fa-times"></i></button>
+                <h4 class="modal-title text-right">ورود</h4>
+            </div>
+            <div class="modal-body">
+                <p>نام کاربری:</p>
+                <input type="text" class="form-control" placeholder="نام کاربری خود را وارد کنید" required>
+                <p>رمز عبور:</p>
+                <input type="password" class="form-control" placeholder="رمز عبور خود را وارد کنید" required>
+            </div>
+            <a href="#" id="login" class="text-center">
+                <button type="button" class="btn btn-info" style="width: 90%;">ورود</button>
+            </a>
+            <div class="modal-footer">
+                <a href="#" class="text-right">رمز خود را فراموش کرده اید!</a>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">خروج <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="Services" class="container-fluid text-center bg-secondary" style="padding-bottom: 70px;">
+    <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <i class="fas fa-motorcycle fa-2x"></i>
+            <h4>ارسال به تمام نقاط کشور </h4>
+            <p>به سریع ترین حالت ممکن به تمام نقاط کشور ارسال داریم</p>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <i class="fas fa-download fa-2x"></i>
+            <h4>
+                دسترسی آسان به انواع کتاب
+            </h4>
+            <p>با توجه به نبود تعدادی از کتاب ها امکان دانلود pdf نیز وجود دارد</p>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <i class=" 	fas fa-handshake fa-2x"></i>
+            <h4>امکان امانت دادن کتاب </h4>
+            <p>امکان امانت دادن کتاب به استادان و دانشجویان تهران</p>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <i class="fas fa-shopping-cart fa-2x"></i>
+            <h4>
+                خرید کتاب های قدیمی از شما
+            </h4>
+            <p>با توجه به کمبود کتاب های قدیمی این امکان وجود دارد</p>
+        </div>
+    </div>
+</div>
+<div id="Gallery" class="container-fluid bg-dark"
+     style="padding-top:70px;padding-bottom:70px;">
+    <div class="row slideshow">
+        <div class="col-12 text-right">
+            <h3>گالری کتاب ها</h3>
+        </div>
+        <div class="col-md-3 col-12">
+            <a data-toggle="modal" data-target="#modal-image-1" data-backdrop="static">
+                <img src="assets/images/books/nelson.jpg" width="100%" height="auto" class="rounded" alt="image" style="cursor: pointer">
+            </a>
+        </div>
+        <div class="col-md-3 col-12">
+            <a data-toggle="modal" data-target="#modal-image-2" data-backdrop="static">
+                <img src="assets/images/books/napelon.jpg" width="100%" height="auto" class="rounded" alt="image" style="cursor: pointer">
+            </a>
+        </div>
+        <div class="col-md-3 col-12">
+            <a data-toggle="modal" data-target="#modal-image-3" data-backdrop="static">
+                <img src="assets/images/books/chernobyl.jpg" width="100%" height="auto" class="rounded" alt="image" style="cursor: pointer">
+            </a>
+        </div>
+        <div class="col-md-3 col-12">
+            <a data-toggle="modal" data-target="#modal-image-4" data-backdrop="static">
+                <img src="assets/images/books/raz.jpg" width="100%" height="auto" class="rounded" alt="image" style="cursor: pointer">
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="modal bg-dark flex-row-reverse fade" id="modal-image-1" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content" role="document">
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal"><i class="fas fa-times"></i></button>
+                <img src="assets/images/books/nelson.jpg" width="100%" height="100%" alt="largeimage">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal bg-dark flex-row-reverse fade" id="modal-image-2" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content" role="document">
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal"><i class="fas fa-times"></i></button>
+                <img src="assets/images/books/napelon.jpg" width="100%" height="100%" alt="largeimage">
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="modal bg-dark flex-row-reverse fade" id="modal-image-3" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content" role="document">
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal"><i class="fas fa-times"></i></button>
+                <img src="assets/images/books/chernobyl.jpg" width="100%" height="100%" alt="largeimage">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal bg-dark fade" id="modal-image-4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content" role="document">
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal"><i class="fas fa-times"></i></button>
+                <img src="assets/images/books/raz.jpg" width="100%" height="100%">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bgimg-2 col-12">
+    <div id="Comments" class="carousel container slide" data-ride="carousel"
+         style="direction: ltr;padding-top: 70px;padding-bottom: 70px;">
+        <h3 class="text-center">تعدادی از نویسندگان مشهور تاریخ</h3>
+        <div class="row slideshow">
+            <div class="carousel-inner text-center">
+                <div class="carousel-item active">
+                    <img src="assets/images/writers/Leo_Tolstoy_1897,_black_and_white,_37767u.jpg" width="300" height="300">
+                    <p>لِو نیکلایِویچ تولستوی(۱۸۲۸–۱۹۱۰)</p>
+                    <p style="text-align: right;direction: rtl;">
+                        تولستوی رمان‌نویس روسی بود. همه با این موضوع که دو رمان بزرگ تولستوی، یعنی جنگ و صلح و آنا
+                        کارنینا در صدر ادبیات واقع‌گرایانه قرار دارند، موافق‌اند. از او بارها و بارها با عنوان بزرگ‌ترین
+                        نویسنده‌ی تاریخ یادشده و به همین دلیل است که نام او در این فهرست قرارگرفته است. او یکی از دو غول
+                        ادبیات روسیه است. داستایوفسکی از او با عنوان بزرگ‌ترین رمان‌نویس جهان یادکرد.
+                    </p>
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/images/writers/Dickens_Gurney.jpg" width="300" height="300">
+                    <p>چارلز جان هافِم دیکنز(۱۸۱۲–۱۸۷۰)</p>
+                    <p style="direction: rtl;text-align: right;">
+                        چارلز دیکنز انسانی استثنایی بود. او را بیشتر به‌عنوان یک رمان‌نویس می‌شناسند اما او خیلی بیشتر
+                        از این‌ها بود. چارلز دیکنز در زمینه‌های دیگر نیز به همان اندازه برجسته بود اما ما امروزه شناخت
+                        چندانی از سایر فعالیت‌های ادبی او نداریم. ما از او به‌عنوان نویسنده‌ی الیور توئیست، دیوید
+                        کاپرفیلد، آرزوهای بزرگ، داستان دو شهر، خانه غم‌زده و بسیاری رمان‌های دیگر یاد می‌کنیم که همگی
+                        رمان‌های کلاسیک انگلیسی هستند.
+                    </p>
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/images/writers/James-Joyce.jpg" width="300" height="300">
+                    <p>جیمز آگوستین آلویسیوس جویس(۱۸۸۲–۱۹۴۱)</p>
+                    <p style="direction: rtl;text-align: right;">
+                        جیمز جویس، رمان‌نویس ایرلندی را بیشتر با رمان‌های اولیس و رستاخیز فینیگان می‌شناسند و از او
+                        به‌عنوان یکی از مهم‌ترین و تأثیرگذارترین نویسندگان قرن بیستم یاد می‌کنند. اولیس رمانی بدیع است
+                        که شیوه‌ی اودیسه‌ی هومر، در بخش‌ها و سبک‌های گوناگون نوشته‌شده است. مجموعه داستان‌های کوتاه جویس
+                        با عنوان دوبلینی‌ها، یکی از بهترین مجموعه داستان‌های قرن شناخته‌شده است.
+                    </p>
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/images/writers/Emily_Dickinson_daguerreotype_(Restored).jpg" width="300" height="300">
+                    <p>امیلی الیزابت دیکینسون (۱۸۳۰–۱۸۸۶)</p>
+                    <p style="direction: rtl;text-align: right;">
+                        بااینکه کسی امیلی دیکنسون را در طول حیاتش به‌عنوان یک شاعر نمی‌شناخت، حالا اما همه او را یکی از
+                        قدرتمندترین نمایندگان فرهنگ آمریکا می‌دانند. اشعار او الهام‌بخش نویسندگان بسیاری، ازجمله خواهران
+                        برونته بوده است. در سال ۱۹۹۶، منتقد ادبی، هارولد بلوم نام او را در فهرست ۲۶ نویسنده‌ی اصلی تمدن
+                        غرب جای داد. پس از مرگ امیلی دیکنسون، خواهرش تقریباً دو هزار شعر به قلم او پیدا کرد.
+                    </p>
+                </div>
+            </div>
+            <span>
+              <a class="carousel-control-prev" href="#Comments" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+                </span>
+            <span>
+                   <a class="carousel-control-next" href="#Comments" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+            </span>
+            <ul class="carousel-indicators">
+                <li data-target="#Comments" data-slide-to="0" class="active"></li>
+                <li data-target="#Comments" data-slide-to="1"></li>
+                <li data-target="#Comments" data-slide-to="2"></li>
+                <li data-target="#Comments" data-slide-to="3"></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="bgimg-3 col-12">
+    <div class="container-fluid" id="cal-ta" style="padding-top: 70px;padding-bottom: 70px;">
+        <div class="row slideshow">
+            <div class="col-md-6">
+                <p id="datepicker" class='ui-widget-content'>
+                    <strong class='ui-state-error'>تاریخ شروع و پایان را مشخص کنید</strong><br/>
+                    <input type="text" id="datepicker12from" placeholder="شروع">
+                    <input type="text" id="datepicker12to" placeholder="پایان">
+                </p>
+            </div>
+            <div class="col-md-6 col-12" style="direction: ltr;">
+                <table>
+                    <tr>
+                        <td id="sciout">
+                            <div>
+                                <div id="sciOutPut">0</div>
+                            </div>
+                            <div style="padding-top:3px;width:100%">
+                                <div><span onclick="r('sin')" class="scifunc">sin</span><span onclick="r('cos')"
+                                                                                              class="scifunc">cos</span><span
+                                        onclick="r('tan')" class="scifunc">tan</span><span class="scird"><label
+                                        for="scirdsettingd"><input id="scirdsettingd" type="radio" name="scirdsetting"
+                                                                   value="deg" onClick="degreeRadians='degree';"
+                                                                   checked>Deg</label><label
+                                        for="scirdsettingr"><input id="scirdsettingr" type="radio" name="scirdsetting"
+                                                                   value="rad"
+                                                                   onClick="degreeRadians='radians';">Rad</label></span>
+                                </div>
+                                <div><span onclick="r('asin')" class="scifunc">sin<sup>-1</sup></span><span
+                                        onclick="r('acos')" class="scifunc">cos<sup>-1</sup></span><span
+                                        onclick="r('atan')"
+                                        class="scifunc">tan<sup>-1</sup></span><span
+                                        onclick="r('pi')" class="scifunc">&#960;</span><span onclick="r('e')"
+                                                                                             class="scifunc">e</span>
+                                </div>
+                                <div><span onclick="r('pow')" class="scifunc">x<sup>y</sup></span><span
+                                        onclick="r('x3')"
+                                        class="scifunc">x<sup>3</sup></span><span
+                                        onclick="r('x2')" class="scifunc">x<sup>2</sup></span><span onclick="r('ex')"
+                                                                                                    class="scifunc">e<sup>x</sup></span><span
+                                        onclick="r('10x')" class="scifunc">10<sup>x</sup></span></div>
+                                <div><span onclick="r('apow')" class="scifunc"><sup>y</sup>&#8730;x</span><span
+                                        onclick="r('3x')" class="scifunc"><sup>3</sup>&#8730;x</span><span
+                                        onclick="r('sqrt')" class="scifunc">&#8730;x</span><span onclick="r('ln')"
+                                                                                                 class="scifunc">ln</span><span
+                                        onclick="r('log')" class="scifunc">log</span></div>
+                                <div><span onclick="r('(')" class="scifunc">(</span><span onclick="r(')')"
+                                                                                          class="scifunc">)</span><span
+                                        onclick="r('1/x')" class="scifunc">1/x</span><span onclick="r('pc')"
+                                                                                           class="scifunc">%</span><span
+                                        onclick="r('n!')" class="scifunc">n!</span></div>
+                            </div>
+                            <div style="padding-top:3px;">
+                                <div><span onclick="r(7)" class="scinm">7</span><span onclick="r(8)"
+                                                                                      class="scinm">8</span><span
+                                        onclick="r(9)" class="scinm">9</span><span onclick="r('+')"
+                                                                                   class="sciop">+</span><span
+                                        onclick="r('MS')" class="sciop">MS</span></div>
+                                <div><span onclick="r(4)" class="scinm">4</span><span onclick="r(5)"
+                                                                                      class="scinm">5</span><span
+                                        onclick="r(6)" class="scinm">6</span><span onclick="r('-')"
+                                                                                   class="sciop">&ndash;</span><span
+                                        onclick="r('M+')" class="sciop">M+</span></div>
+                                <div><span onclick="r(1)" class="scinm">1</span><span onclick="r(2)"
+                                                                                      class="scinm">2</span><span
+                                        onclick="r(3)" class="scinm">3</span><span onclick="r('*')"
+                                                                                   class="sciop">&#215;</span><span
+                                        onclick="r('M-')" class="sciop">M-</span></div>
+                                <div><span onclick="r(0)" class="scinm">0</span><span onclick="r('.')"
+                                                                                      class="scinm">.</span><span
+                                        onclick="r('EXP')" class="sciop">EXP</span><span onclick="r('/')" class="sciop">&#247;</span><span
+                                        onclick="r('MR')" class="sciop">MR</span></div>
+                                <div><span onclick="r('+/-')" class="sciop">&#177;</span><span onclick="r('RND')"
+                                                                                               class="sciop">RND</span><span
+                                        onclick="r('C')" class="scieq">C</span><span onclick="r('=')"
+                                                                                     class="scieq">=</span><span
+                                        onclick="r('MC')" class="sciop">MC</span></div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div style="position:relative;">
+    <div id="video" class="container-fluid bg-dark" style="padding-bottom: 0;padding-top: 100px;">
+        <div class="h_iframe-aparat_embed_frame"><span style="display: block;padding-top: 57%"></span>
+            <iframe src="https://www.aparat.com/video/video/embed/videohash/yZuKG/vt/frame" allowFullScreen="true"
+                    webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+        </div>
+    </div>
+</div>
+<div style="position:relative;">
+    <div id="Contact" class="container-fluid bg-secondary" style="padding-top: 70px;">
+        <h2 class="text-center ">تماس با ما</h2>
+        <div class="row">
+            <div class="col-md-4">
+
+                <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 300px">
+                    <embed src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d810.3680478489003!2d51.44501562916202!3d35.66537358832442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f91fd5f689de047%3A0x197d9bd73c421f3d!2sRapelcity!5e0!3m2!1sen!2sus!4v1602840277291!5m2!1sen!2sus"
+                           width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""
+                           aria-hidden="false"
+                           tabindex="0">
+                </div>
+            </div>
+            <div class="col-md-4 text-right">
+                <h4>طریقه تماس و ارتباط با ما</h4>
+                <p><i class="fas fa-map-marker-alt"></i>
+                    تهران میدان خراسان</p>
+                <p><i class="fas fa-phone"></i> 021-1234567</p>
+                <p><i class="fas fa-envelope"></i>
+                    sajjadkhalafi956@gmail.com</p>
+            </div>
+            <div class="col-md-4 text-right">
+                <div class="row">
+                    <div class="col-md-6 form-group">
+                        <input class="form-control" id="name" name="name" placeholder="نام کاربری" type="text"
+                               required>
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <input class="form-control" id="email" name="email" placeholder="آدرس ایمیل" type="email"
+                               required>
+                    </div>
+                </div>
+                <i class="fas fa-comment  text-right"></i>
+                <textarea class="form-control" id="comment" name="comments" placeholder="نظرات خود را وارد کنید"
+                          rows="5"></textarea>
+                <div class="row">
+                    <div class="col-12 form-group">
+                        <button class="btn btn-info pull-right" type="submit">ارسال</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<footer class="bg-dark text-center">
+    <a href="#top">
+        <i class="fas fa-angle-double-up fa-2x text-danger"></i>
+    </a>
+    <div class=" text-center" style="padding-bottom: 10px">
+        تمامی اطلاعات محفوظ این سایت می باشد با تشکر از سایت
+        <a href="https://maktabkhooneh.org/" target="_blank" class="text-danger">مکتب خونه</a>
+        برای کمک به طراحی این سایت!
+    </div>
+</footer>
+</body>
+<script src="assets/js/script.js" type="text/javascript" rel="script"></script>
+</html>

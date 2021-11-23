@@ -1,0 +1,283 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+    color: white;
+    font-family: "B Yekan";
+}
+.h_iframe-aparat_embed_frame {
+    position: relative;
+}
+
+.h_iframe-aparat_embed_frame .ratio {
+    display: block;
+    width: 100%;
+    height: 300px;
+}
+
+.h_iframe-aparat_embed_frame iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.bgimg-1, .bgimg-2, .bgimg-3 {
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.bgimg-1 {
+    background-image:url("../images/books/book1.jpg");
+    min-height: 350px;
+    min-width: 100%;
+}
+
+.bgimg-2 {
+    background-image: url("../images/books/book-darkness-book-in-the-dark-black-and-white-dark.jpg");
+    min-height: 300px;
+    background-size: cover;
+}
+
+.bgimg-3 {
+    background-image: url("../images/books/wallpaper2you_319007.jpg");
+    min-height: 300px;
+    background-size: cover;
+}
+
+.map-container{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.map-container embed{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+    }
+}
+@media only screen and (min-device-width: 1024px) {
+    .h_iframe-aparat_embed_frame iframe {
+        height: 80%;
+    }
+}
+ #sciout {
+     padding: 5px;
+     border-top: 1px solid #262626;
+     border-left: 1px solid #262626;
+     border-right: 2px outset #262626;
+     border-bottom: 2px outset #262626;
+     background: #eeeeee;
+     font-family: arial, helvetica, sans-serif;
+ }
+
+#sciOutPut {
+    font-size: 18px;
+    padding: 3px;
+    margin: 2px;
+    cursor: text;
+    text-align: right;
+    background-color: #B8C6A3;
+    border: 1px solid #87996b;
+    border-radius: 3px;
+    color: #000;
+}
+
+.scifunc {
+    display: inline-block;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    width: 50px;
+    height: 25px;
+    margin: 1px;
+    border: 1px solid #262626;
+    border-radius: 3px;
+    font-family: arial, helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #185290;
+    background-color: #C8D8E8;
+}
+
+.scifunc:active {
+    background-color: #013f7d;
+    color: #ffffff;
+}
+
+.scinm {
+    display: inline-block;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 5px 0px;
+    text-align: center;
+    width: 50px;
+    height: 30px;
+    margin: 1px;
+    border: 1px solid #262626;
+    border-radius: 3px;
+    font-family: arial, helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFF;
+    background-color: #262626;
+}
+
+.scinm:active {
+    background-color: #aaaaaa;
+    color: #000000;
+}
+
+.sciop {
+    display: inline-block;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 5px 0px;
+    text-align: center;
+    width: 50px;
+    height: 30px;
+    margin: 1px;
+    border: 1px solid #262626;
+    border-radius: 3px;
+    font-family: arial, helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #262626;
+    background-color: #ccc;
+}
+
+.sciop:active {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.scird {
+    display: inline-block;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    height: 30px;
+    margin: 1px;
+    border: 1px solid #eeeeee;
+    border-radius: 3px;
+    font-family: arial, helvetica, sans-serif;
+    font-size: 13px;
+    color: #262626;
+}
+
+.scieq {
+    display: inline-block;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 5px 0px;
+    text-align: center;
+    width: 50px;
+    height: 30px;
+    margin: 1px;
+    border: 1px solid #262626;
+    border-radius: 3px;
+    font-family: arial, helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #F00;
+    background-color: #DCADB0;
+}
+
+.scieq:active {
+    background-color: #ff0000;
+    color: #ffffff;
+}
+
+#calfootnote {
+    font-family: arial, helvetica, sans-serif;
+    font-size: 12px;
+    text-align: right;
+}
+
+#datepicker
+{
+    padding: 25px;
+    margin: 25px auto;
+    width: 450px;
+}
+#datepicker.ui-state-hover
+{
+    font-weight: normal;
+}
+#datepicker.ui-widget-header
+{
+    text-align: center;
+    font-weight: normal;
+}
+strong.ui-state-error
+{
+    display: block;
+    padding: 3px;
+    text-align: center;
+}
+.slideshow {opacity: 0;}
+.slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+    opacity: 1;
+}
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(70%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+@-webkit-keyframes slide {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
+}
+.fade-in {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 1s linear;
+}
+
+.fade-out {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 1s, opacity 1s linear;
+}
+@media screen and (max-width: 992px ) {
+    body{
+        background-color: #95999c;
+    }
+}
+@media screen and (max-width: 768px ) {
+    img {
+        margin-top: 40px;
+    }
+    .bgimg-1,#datepicker{
+        max-width: 100%;
+    }
+    body{
+        background-color: #494f54;
+    }
+}
